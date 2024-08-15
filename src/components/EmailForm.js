@@ -4,6 +4,9 @@ import './EmailForm.css';
 function EmailForm() {
   return (
     <div className="bodyMail">
+      <h1>
+          TEMPLATE<span className="highlight">EMAIL</span>
+        </h1>
     <div className="orderMail-form-container">
       <form className="orderMail-form">
         <div className="orderMail-form-group">
