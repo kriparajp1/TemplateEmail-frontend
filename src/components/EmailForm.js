@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './EmailForm.css';
 
+axios.defaults.withCredentials = true;
 function EmailForm() {
   
   const [email, setEmail] = useState('');

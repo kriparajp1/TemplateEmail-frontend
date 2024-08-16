@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './LoginPage.css';
 
+axios.defaults.withCredentials = true;
+
 function LoginPage() {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
