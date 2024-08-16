@@ -1,62 +1,80 @@
-.orderMail-form-container {
-    margin: auto;
-    background-color: #282828;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 400px;
-  }
-  body{
-    background-color: #1d1d1d;
-  }
-  .bodyMail{
-    margin: 0;
-  font-family: Arial, sans-serif;
+/* Container styling */
+.emailform-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   background-color: #1d1d1d;
-  color: #fff;
+  padding: 20px;
+}
+
+/* Title styling */
+.emailform-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
   text-align: center;
-  padding: 20px 0;
+}
+
+/* Form styling */
+.emailform-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Input fields styling */
+.emailform-input,
+.emailform-textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/* Textarea styling */
+.emailform-textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Button styling */
+.emailform-button {
+  width: 108%;
+  padding: 15px;
+  background-color: #ff9500;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.emailform-button:hover {
+  background-color: #e08700;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .emailform-container {
+      padding: 10px;
   }
-  .bodyMail h1 {
-    font-size: 2rem;
-    color: #ff6501;
+
+  .emailform-title {
+      font-size: 2rem;
   }
-  
-  .bodyMail .highlight {
-    color: #9144ff;
+
+  .emailform-input,
+  .emailform-textarea,
+  .emailform-button {
+      font-size: 0.9rem;
+      padding: 12px;
   }
-  .orderMail-form-group {
-    margin-bottom: 15px;
-  }
-  
-  .orderMail-form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .orderMail-form-group input,
-  .orderMail-form-group textarea {
-    width: 96%;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .orderMail-submit-button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ff9d01;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .orderMail-submit-button:hover {
-    background-color: #ff6501;
-  }
-  
+}

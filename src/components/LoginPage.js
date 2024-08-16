@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import './LoginPage.css';
 
 function LoginPage() {
@@ -7,11 +8,27 @@ function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Perform validation or authentication here
-        navigate('/email-form'); // Redirect to EmailForm page
-    };
+    
+        try {
+          const response = await axios.post('http://localhost:5000/api/login', {
+            email,
+            password,
+          });
+    
+          if (response.data.success) {
+            navigate('/email-form');
+          } else {
+            console.log("hello")
+            alert(response.data.message);
+          }
+        } catch (error) {
+          console.error("There was an error logging in!", error);
+          console.log("hello1")
+          alert('Login failed. Please try again.');
+        }
+      };
 
     return (
         <div className="login-container">
