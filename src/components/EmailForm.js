@@ -14,7 +14,7 @@ function EmailForm() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://templatemail-backend.onrender.com/api/send-email', {
+      const response = await axios.post('http://localhost:5000/api/send-email', {
         email,
         subject,
         heading,
