@@ -14,7 +14,7 @@ function LoginPage() {
         e.preventDefault();
     
         try {
-          const response = await axios.post('http://localhost:5000/api/login', {
+          const response = await axios.post('https://templatemail-backend.onrender.com/api/login', {
             email,
             password,
           });
